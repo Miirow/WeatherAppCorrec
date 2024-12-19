@@ -1,0 +1,265 @@
+root{
+    color:black;
+}
+
+body {
+    font-family:'Helvetica Neue',Helvetica,sans-serif;
+    background: radial-gradient(circle, rgb(140, 226, 252) 20%, rgb(61, 159, 250) 60%, rgb(0, 89, 255) 100%);
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    z-index: 10;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: 100px;
+    
+}
+
+
+
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 15px; 
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+
+.card img {
+    margin-left: 30%;
+}
+
+.card h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card button {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2575fc;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 1 auto;
+}
+
+
+.search-input {
+    
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 4px 4px;
+    outline: none;
+    background: transparent;
+    
+}
+
+.search-button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #0056b3;
+}
+
+
+
+.cloud {
+    position: absolute;
+    background: #fff;
+    box-shadow: -15px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cloud:before,
+.cloud:after,
+.cloud-top {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.cloud:before {
+    width: 135px;
+    height: 135px;
+    top: -35px;
+    left: -60px;
+}
+
+.cloud:after {
+    width: 110px;
+    height: 110px;
+    top: -10px;
+    left: 60px;
+}
+
+.cloud .cloud-top {
+    width: 100px;
+    height: 100px;
+    top: -70px;
+    left: 30px;
+}
+
+.cloud1 {
+    width: 120px;
+    height: 100px;
+    top: 50px;
+    left: 0px;
+    animation: moveClouds var(--cloud-speed) linear infinite;
+    z-index: -8;
+}
+
+.cloud2 {
+    width: 120px;
+    height: 100px;
+    top: 100px;
+    left: 1000px;
+    animation: moveClouds var(--cloud-speed) linear infinite;
+}
+
+.cloud3 {
+    width: 120px;
+    height: 100px;
+    top: 250px;
+    left: 300px;
+    z-index: -1;
+    animation: moveClouds var(--cloud-speed) linear infinite;
+}
+
+.cloud4 {
+    width: 120px;
+    height: 100px;
+    top: 700px;
+    left: 1300px;
+    animation: moveClouds var(--cloud-speed) linear infinite;
+}
+
+.cloud5 {
+    width: 120px;
+    height: 100px;
+    top: 800px;
+    left: 600px;
+    animation: moveClouds var(--cloud-speed) linear infinite;
+}
+
+@keyframes moveClouds {
+    0% { transform: translateX(-100vw); }
+    100% { transform: translateX(100vw); }
+}
+
+
+
+.sun-wrapper {
+    position: absolute;
+    width: 90%;
+    top: 45%;
+    left: -45%;
+    animation: 10s rotate linear infinite;
+    transform-origin: bottom right;
+    z-index: -10;
+  }
+  
+
+.sun {
+    width: 200px;
+    height: 200px;
+    border-radius: 999rem;
+    background: radial-gradient(circle, #ffd700, #ff8c00);
+    filter: drop-shadow(0px 0px 16px rgba(235, 110, 75, 0.4));
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .sun-wrapper {
+      width: 75%;
+      top: 60%;
+      left: -25%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .sun-wrapper {
+      width: 70%;
+      top: 70%;
+      left: -20%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .sun-wrapper {
+      width: 65%;
+      top: 80%;
+      left: -15%;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .sun-wrapper {
+      width: 60%;
+      top: 100%;
+      left: -10%;
+    }
+  }
